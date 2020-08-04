@@ -1,0 +1,53 @@
+# INSTRUCTIONS
+#replace REPO with your repository name
+
+# 2020 WEB Systems Programming
+
+folder php contains php code  
+folder sql contains SQL queries  
+folder sh contains deployment script for ubuntu webserver (VM)  
+
+# GIT - create a new git repository
+
+# GIT - Clone Git repo (use your own repository replace REPO with its name )
+
+$git clone https://github.com/MYACCOUNT/REPO.git  
+$cd REPO  
+$ls  
+
+
+$cd REPO   
+$ls  
+$git config --list  
+Use your name and email  
+$git config --global user.name "Bill Smith"  
+$git config --global user.email xxx@yyy.net   
+$git config --list    
+
+
+$cd ..  
+
+# Download the zip (files) in this repo and unzip them into your local repository
+/REPO/php  
+/REPO/SQL  
+/REPO/sh  
+
+
+# VSCODE - Edit in VSCode
+$cd ~/REPO  
+$code .
+
+# Deployment script
+$cd ~/REPO  
+$cd sh  
+$ls –sail  
+$chmod +x *.sh
+$cat deploy.sh  #first deployment script (creates folders)
+$./deploy.sh
+$cd /var/www/html
+$ls
+
+# Test deployment
+http://localhost/REPO/  
+http://localhost/REPO/hello.php  
+#
