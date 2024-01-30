@@ -47,5 +47,5 @@ jobs:
         password: ${{ secrets.CLOUD_USER_PASSWD }}
         port: ${{ secrets.PORT }}
         script: |
-          chmod -R 777 /tmp/deploy/sh
-          sh /tmp/deploy/sh/deploy.sh
+          echo ${{ secrets.CLOUD_USER_PASSWD }} | sudo -S chmod -R 777 /tmp/deploy/sh
+          echo ${{ secrets.CLOUD_USER_PASSWD }} | sudo -S sh /tmp/deploy/sh/deploy.sh
