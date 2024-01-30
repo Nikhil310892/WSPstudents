@@ -1,6 +1,6 @@
-if [ ! -d /var/www/html/REPO ]                      # check if directory doesnt exist
+if [ ! -d /var/www/html/WSPstudent ]                      # check if directory doesnt exist
 then
-    sudo mkdir /var/www/html/REPO                   # create directory
+    sudo mkdir /var/www/html/WSPstudent                   # create directory
 fi
-sudo cp -r ../php/* /var/www/html/REPO              #copy PHP files
-sudo chown -R www-data:www-data /var/www/html/REPO/  # give apache server ownership
+sudo cp -r /tmp/deploy/php/* /var/www/html/WSPstudent              #copy PHP files
+sudo chown -R www-data:www-data /var/www/html/WSPstudent/  # give apache server ownership
