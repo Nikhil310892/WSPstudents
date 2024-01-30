@@ -25,7 +25,7 @@ jobs:
       uses: garygrossgarten/github-action-scp@release
       with:
         local: php
-        remote: /tmp
+        remote: /tmp/php
         host: ${{ secrets.CLOUD_SERVER }}
         username: ${{ secrets.CLOUD_USER }}
         password: ${{ secrets.CLOUD_USER_PASSWD }}
