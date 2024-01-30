@@ -21,11 +21,20 @@ jobs:
     - name: checkout
       uses: actions/checkout@v2
 
-    - name: Copy folder content recursively to remote
+    - name: Copy php
       uses: garygrossgarten/github-action-scp@release
       with:
         local: php
-        remote: /tmp/php
+        remote: /tmp/deploy/php
+        host: ${{ secrets.CLOUD_SERVER }}
+        username: ${{ secrets.CLOUD_USER }}
+        password: ${{ secrets.CLOUD_USER_PASSWD }}
+
+    - name: Copy Shell
+      uses: garygrossgarten/github-action-scp@release
+      with:
+        local: sh
+        remote: /tmp/deploy/sh
         host: ${{ secrets.CLOUD_SERVER }}
         username: ${{ secrets.CLOUD_USER }}
         password: ${{ secrets.CLOUD_USER_PASSWD }}
