@@ -42,9 +42,9 @@ jobs:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@v1.0.3
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
+        host: ${{ secrets.CLOUD_SERVER }}
+        username: ${{ secrets.CLOUD_USER }}
+        password: ${{ secrets.CLOUD_USER_PASSWD }}
         port: ${{ secrets.PORT }}
         script: |
           chmod -R 777 /tmp/deploy/sh
